@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.p1.FabFragment">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonIncome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:clickable="true"
+        android:layout_marginBottom="180dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:elevation="6dp"
+        app:fabSize="normal"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:pressedTranslationZ="12dp"
+        app:backgroundTint="@color/colorYellow"
+        android:visibility="invisible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:clickable="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:elevation="6dp"
+        app:fabSize="normal"
+        android:src="@android:drawable/button_onoff_indicator_on"
+        app:pressedTranslationZ="12dp"
+        app:backgroundTint="@color/colorYellow"
+        android:visibility="invisible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:clickable="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:elevation="6dp"
+        app:fabSize="normal"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:pressedTranslationZ="12dp"/>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Ekonomiapp</string>
+    <string name="lägg_till_en_utgift">Lägg till en utgigt</string>
+    <string name="lägg_till_en_incomst">Lägg till en inkomst</string>
+    <string name="se_text">Se text</string>
+    <string name="summary_income">Se alla incomster</string>
+    <string name="summary_spending">Se alla utgifter</string>
+    <string name="lägg_till_sum">Summan</string>
+    <string name="lägg_till_pris">Pris</string>
+    <string name="question_date">Lägg till datum</string>
+    <string name="titel">Titel</string>
+    <string name="kategori">Kategori</string>
+    <string name="datumintervall">Välj datumintervall</string>
+    <string name="your_name">Ditt namn:   </string>
+    <string name="your_totale_income">Din totala inkomst:   </string>
+    <string name="your_totale_expense">Din totala utgift:   </string>
+    <string name="text_scan">Koden är:    </string>
+    <string name="save_scan_info">Spara information</string>
+    <string name="scan">Skanna en gång till</string>
+
+
+
+
+    <string-array name="incomeCategories">
+        <item>Välj kategori</item>
+        <item>lön</item>
+        <item>studiemedel</item>
+    </string-array>
+
+    <string-array name="expenseCategories">
+        <item>Välj kategori</item>
+        <item>livsmedel</item>
+        <item>fritid</item>
+        <item>resor</item>
+        <item>boende</item>
+        <item>övrigt</item>
+    </string-array>
+
+
+</resources>

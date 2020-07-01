@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btnIncomes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inkomster" />
+
+    <Button
+        android:id="@+id/btnExpenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Utgifter" />
+
+    <Button
+        android:id="@+id/btnGeneralInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Allmän info" />
+
+    <Button
+        android:id="@+id/btnScann"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scann" />
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Please place your fingertip on the fingerprint scanner to verify your identity."
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:id="@+id/tvMessage"/>
+
+    <Button
+        android:id="@+id/cancelbutton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="232dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        android:text="Stop"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+</LinearLayout>
