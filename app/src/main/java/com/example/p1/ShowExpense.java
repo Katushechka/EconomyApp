@@ -18,6 +18,9 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.p1.database.Expense;
+import com.example.p1.listAdapter.ExpenseListAdapter;
+
 import java.util.List;
 
 public class ShowExpense extends AppCompatActivity {
@@ -94,7 +97,6 @@ public class ShowExpense extends AppCompatActivity {
     }
 
     //delete all notes
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
@@ -114,9 +116,7 @@ public class ShowExpense extends AppCompatActivity {
         }
     }
 
-
     private void populateList (){
         LiveData<List<Expense>> allNotes = economyViewModel.getAllExpenses();
-        //Log.e(allNotes);
     }
 }

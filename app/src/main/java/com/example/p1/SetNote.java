@@ -5,20 +5,23 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
+
+import com.example.p1.database.Expense;
+import com.example.p1.database.Income;
+import com.example.p1.fragments.DateFragment;
+import com.example.p1.fragments.ExpenseSpinnerFragment;
+import com.example.p1.fragments.IncomeSpinnerFragment;
+import com.example.p1.fragments.TitelSumDataFragment;
 
 public class SetNote extends AppCompatActivity {
     private EconomyViewModel economyViewModel;
@@ -192,9 +195,6 @@ public class SetNote extends AppCompatActivity {
         }
     }
 
-
-
-
     public void showDatePicker(){
         dateFragment = new DateFragment();
         dateFragment.show(getSupportFragmentManager(), "datepicker");
@@ -237,8 +237,4 @@ public class SetNote extends AppCompatActivity {
         fragmentTransaction.replace(R.id.lower_container,(Fragment)fragment);
         fragmentTransaction.commit();
     }
-
-
-
-
 }

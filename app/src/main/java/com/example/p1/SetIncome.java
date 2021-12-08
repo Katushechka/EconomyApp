@@ -14,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.p1.fragments.DateFragment;
+
 public class SetIncome extends AppCompatActivity {
     private Spinner spinner;
     private String category;
@@ -21,18 +23,9 @@ public class SetIncome extends AppCompatActivity {
     private DateFragment dateFragment;
     private Button date;
 
-
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setincome);  //category
-
-
-
-
-
-
         date = findViewById(R.id.data);
         date.setTextColor(ContextCompat.getColor(this, R.color.colorInputField));
         date.setOnClickListener(new View.OnClickListener() {
@@ -109,4 +102,3 @@ public class SetIncome extends AppCompatActivity {
 
     }
 }
-//--------------------------------------------------------------------------------------

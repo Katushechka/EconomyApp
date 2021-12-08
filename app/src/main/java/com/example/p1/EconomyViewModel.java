@@ -6,6 +6,10 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
+import com.example.p1.database.EconomyRepository;
+import com.example.p1.database.Expense;
+import com.example.p1.database.Income;
+
 import java.util.List;
 
 /**

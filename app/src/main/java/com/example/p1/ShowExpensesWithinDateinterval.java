@@ -12,6 +12,9 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.p1.database.Expense;
+import com.example.p1.listAdapter.ExpenseListAdapter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,13 +69,11 @@ public class ShowExpensesWithinDateinterval extends AppCompatActivity {
         String monthStopDate;
         String dayStopDate;
 
-
         int firstSlashStartDate = startdate.indexOf('/');
         int lastSlashStartDate = startdate.length()-3;
         yearStartDate = "20"+startdate.substring(lastSlashStartDate+1, startdate.length());
         monthStartDate = startdate.substring(0, firstSlashStartDate);
         dayStartDate = startdate.substring(firstSlashStartDate+1, lastSlashStartDate);
-
         int firstSlashStopDate = stopdate.indexOf('/');
         int lastSlashStopDate = stopdate.length()-3;
         yearStopDate = "20"+stopdate.substring(lastSlashStopDate+1, startdate.length());
@@ -104,12 +105,6 @@ public class ShowExpensesWithinDateinterval extends AppCompatActivity {
                     dayList >= dayStartD && dayList <= dayStopD){
                 filterList.add(expense);
             }
-
-
-
-
-
-
         }
         return filterList;
     }

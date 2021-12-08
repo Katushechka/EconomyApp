@@ -45,7 +45,6 @@ public class ShowSelectedExpense extends AppCompatActivity {
         title = (TextView)findViewById(R.id.text_view_title);
         sum = (TextView)findViewById(R.id.text_view_sum);
         data = (TextView)findViewById(R.id.text_view_data);
-  //      category = (TextView)findViewById(R.id.image_view_category);
         image_view_category = (ImageView)findViewById(R.id.image_view_category);
         text_view_barcode = (TextView)findViewById(R.id.text_view_barcode);
         setText();

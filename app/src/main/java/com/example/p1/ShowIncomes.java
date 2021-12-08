@@ -2,7 +2,6 @@ package com.example.p1;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -12,9 +11,6 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -22,11 +18,13 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.p1.database.Income;
+import com.example.p1.listAdapter.EconomyListAdapter;
+
 import java.util.List;
 
 public class ShowIncomes extends AppCompatActivity {
     private EconomyViewModel economyViewModel;
- //   private ShowAllIncomesFragment showAllIncomesFragment;
     private Button showIncomesWithinDateinterval;
     static final String CHOICE = "choice" ;
 
@@ -121,9 +119,7 @@ public class ShowIncomes extends AppCompatActivity {
         }
     }
 
-
     private void populateList (){
         LiveData<List<Income>> allNotes = economyViewModel.getAllNotes();
-        //Log.e(allNotes);
     }
 }

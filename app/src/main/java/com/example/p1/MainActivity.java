@@ -76,12 +76,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 save(v);
                 initFingerprintSensor(v);
-          /*      Intent intent = new Intent (MainActivity.this, GeneralInfo.class);
-                intent.putExtra(NAME, firstname.getText().toString());
-                intent.putExtra(SURNAME, surname.getText().toString());
-                startActivity(intent);*/
-
-
             }
         });
         fingerprintManager = (FingerprintManager)getSystemService(FINGERPRINT_SERVICE);
@@ -225,14 +219,4 @@ public class MainActivity extends AppCompatActivity {
             fingerPrintDialog.dismiss();
         }
     }
-
-   /* public void setFragment(Fragment fragment, boolean backstack) {
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.container, fragment);
-        if(backstack) {
-            ft.addToBackStack(null);
-        }
-        ft.commit();
-    }*/
 }

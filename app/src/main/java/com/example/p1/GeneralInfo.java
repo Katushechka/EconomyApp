@@ -12,6 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.example.p1.fragments.ButtonsFragment;
+import com.example.p1.fragments.FabFragment;
+import com.example.p1.fragments.PersonalInfoFragment;
 import com.google.zxing.Result;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 import static me.dm7.barcodescanner.zxing.ZXingScannerView.*;
@@ -34,8 +38,6 @@ public class GeneralInfo extends AppCompatActivity {
 
 
     ;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,11 +87,8 @@ public class GeneralInfo extends AppCompatActivity {
     }
 
     public void scanCode(View view) {
-
         scanner = new ZXingScannerView(this);
         scanner.setResultHandler(new ZXingScannerResultHandler());
-
-
         setContentView(scanner);
         scanner.startCamera();
 
@@ -101,11 +100,8 @@ public class GeneralInfo extends AppCompatActivity {
 
         @Override
         public void handleResult(Result result) {
-
             resultCode = result.getText();
             Toast.makeText(GeneralInfo.this, resultCode, Toast.LENGTH_SHORT).show();
-
-
             setContentView(R.layout.activity_scanner);
             setBarcode =findViewById(R.id.setBarcode);
             setBarcode.setText(" " +resultCode);
@@ -122,12 +118,8 @@ public class GeneralInfo extends AppCompatActivity {
                     intent.putExtra(CHOICE, "2");
                     startActivity(intent);
                     scan=false;
-
                 }
             });
-
-
-            Log.e("SÄTTER SCAN FALSE","Sätter scan false");
         }
     }
 
@@ -140,7 +132,6 @@ public class GeneralInfo extends AppCompatActivity {
         Intent intent = new Intent (GeneralInfo.this, ShowExpense.class);
         startActivity(intent);
     }
-
 
     public void setpersonalInfoFragment (Fragment fragment, boolean backstack) {
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -155,7 +146,6 @@ public class GeneralInfo extends AppCompatActivity {
         fragmentTransaction.replace(R.id.container2,(Fragment)fragment);
         fragmentTransaction.commit();
     }
-
 
     public void setfabFragment (Fragment fragment, boolean backstack) {
         FragmentManager fragmentManager = getSupportFragmentManager();

@@ -12,6 +12,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.example.p1.database.Income;
+import com.example.p1.listAdapter.EconomyListAdapter;
+
 import java.util.ArrayList;
 import java.util.List;
 

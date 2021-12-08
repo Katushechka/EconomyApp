@@ -45,24 +45,12 @@ public class Dateinterval extends AppCompatActivity {
 
         Calendar minDate = Calendar.getInstance();
         minDate.add(Calendar.DAY_OF_MONTH, -20);
-     //   minDate.add(Calendar.MONTH, -1);
-
         datePicker = findViewById(R.id.datePicker);
-
         datePicker.init(minDate.getTime(), maxDate.getTime()).inMode(CalendarPickerView.SelectionMode.RANGE);
-
-
-     /*   datePicker.init(today, calendar.getTime())
-                .inMode(CalendarPickerView.SelectionMode.RANGE);*/
-
-
 
         final Button btnNext = findViewById(R.id.btnNext);
         btnNext.setEnabled(false);
         btnNext.setTextColor(ContextCompat.getColor(this, R.color.colorInputField));
-
-
-
 
 
         datePicker.setOnDateSelectedListener(new CalendarPickerView.OnDateSelectedListener() {
@@ -114,9 +102,6 @@ public class Dateinterval extends AppCompatActivity {
                     intent.putExtra(STOPDATE, simpleEndDate);
                     startActivity(intent);
                 }
-
-
-
             }
         });
     }
@@ -137,7 +122,6 @@ public class Dateinterval extends AppCompatActivity {
 
     public void setShowIncomesWithinDateinterval(ShowIncomesWithinDateinterval showIncomesWithinDateinterval){
         this.showIncomesWithinDateinterval = showIncomesWithinDateinterval;
-
     }
 
     @Override

@@ -15,18 +15,9 @@ import com.anychart.AnyChartView;
 import com.anychart.chart.common.dataentry.DataEntry;
 import com.anychart.chart.common.dataentry.ValueDataEntry;
 import com.anychart.charts.Pie;
-import com.github.mikephil.charting.charts.BarChart;
-import com.github.mikephil.charting.components.Description;
-import com.github.mikephil.charting.components.LimitLine;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.data.BarData;
-import com.github.mikephil.charting.data.BarDataSet;
-import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
-import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
-import com.github.mikephil.charting.utils.ColorTemplate;
+import com.example.p1.database.Expense;
+import com.example.p1.database.Income;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +29,7 @@ public class Information extends AppCompatActivity {
     private static final String STOPDATE = "stopDate";
     private String startdate;
     private String stopdate;
-    private LiveData<List<Income>> allNotes;   //ta inte bort
+    private LiveData<List<Income>> allNotes;
     private int totalIncome;
     private int totalExpense;
     private int totalSalary;
@@ -59,15 +50,11 @@ public class Information extends AppCompatActivity {
     private ShowIncomesWithinDateinterval showIncomesWithinDateinterval;
     private AnyChartView anyChartView;
 
-
-
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information);
-
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close);
-
 
         textViewYourName = findViewById(R.id.textViewYourName);
         textViewName = findViewById(R.id.textViewName);
@@ -81,13 +68,11 @@ public class Information extends AppCompatActivity {
         allIncome.observe(this, new Observer<List<Income>>() {
             @Override
             public void onChanged(@Nullable List<Income> incomes) {
-   //             adapter.setIncomes(filterIncomeForDate(incomes));
                 getTotalIncome(incomes);
                 setTotalIncome();
                 getTotalSalary(incomes);
                 redundanceDeficit();
                 setupPieChart();
-
             }
         });
 
@@ -100,7 +85,6 @@ public class Information extends AppCompatActivity {
                 setTotalExpense();
                 redundanceDeficit();
                 setupPieChart();
-
             }
         });
 
@@ -120,8 +104,6 @@ public class Information extends AppCompatActivity {
     }
 
     private int getTotalIncome(List<Income> allIncome){
-
-
         for (int i=0; i<allIncome.size(); i++) {
             Income income = allIncome.get(i);     // sparar första Income
             int sum = income.getSum();              //sum
@@ -131,8 +113,6 @@ public class Information extends AppCompatActivity {
     }
 
     private int getTotalExpense(List<Expense> allExpense){
-
-
         for (int i=0; i<allExpense.size(); i++) {
             Expense expense = allExpense.get(i);     // sparar första Expense
             int sum = expense.getSum();              //sum
@@ -147,7 +127,6 @@ public class Information extends AppCompatActivity {
     }
 
     public void redundanceDeficit(){
-
         int resultat = totalIncome - totalExpense;
         if (resultat > 0){
             textViewResult.setText("Överskott är " + resultat);
@@ -160,10 +139,8 @@ public class Information extends AppCompatActivity {
     public void setupPieChart(){
         Pie pie = AnyChart.pie();
         List<DataEntry> dataEntries = new ArrayList<>();
-
         String[] incomeExpense = {"inkomst", "utgift"};
         int[] sum = {totalIncome, totalExpense};
-
 
         for (int i =0; i<incomeExpense.length; i++){
             dataEntries.add(new ValueDataEntry(incomeExpense[i], sum[i]));
